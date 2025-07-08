@@ -10,12 +10,10 @@ Each directory corresponds to a figure in the manuscript and contains:
 
 - Raw simulation data (`*.txt`)
 - Gnuplot scripts (`*.gnu`)
-- Final figures in PDF format (`*.pdf`)
 - Temporary files (e.g., `.tga`, `.dump`) where applicable
 
 ```
 Packing_and_Ejection_of_a_Semiflexible_Polymer_in_a_Capsid_Effect_of_Helicity/
-├── all_fig/     # Final combined figures
 ├── Fig-1/       # Initial configurations / snapshots
 ├── Fig-2/       # Packing time analysis
 ├── Fig-3/       # Tangent–tangent correlation and persistence length
