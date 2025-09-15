@@ -1,30 +1,27 @@
-reset
-set terminal epslatex standalone color size 3,2 font ',8'
+set terminal epslatex color standalone size 3,2 font ",8"
 set output 'FIG_7.tex'
 
-set xlabel '$r/R$'
-set ylabel '$p(r/R)$'
-set label "$\\beta\\kappa_{\\theta}/\\sigma = 10 $" at graph 0.5, 0.9 center
-set label "$\\beta\\kappa_{\\phi}$" at graph 0.5, 0.7 center
-set label "$R=3.52\\sigma$" at graph 0.5, 0.5 center
-set xr[:1]
-set key top left
-set yr[:9]
-set ytics 2
+set xlabel "$n_{pack}/N$"
+set ylabel " $w(n_{pack})$"
+set label "$\\beta\\kappa_{\\theta}/\\sigma = 10 $" at graph 0.5, 0.3 center
+set label "$U_{wall}=0$" at graph 0.5, 0.2 center
+set label "$\\beta\\kappa_{\\phi} $" at graph 0.8, 0.2 center
+#set xrange [*:*] reverse
+set key top right
+# set style data errorbars  <-- Not needed for line-only plot
 set xtics 0.2
-# KDE bandwidth
-bandwidth = 0.1
-
-# Line styles
-set style line 1 lt 1 lw 2 lc rgb "black"
-set style line 2 lt 1 lw 2 lc rgb "red"
-set style line 3 lt 1 lw 2 lc rgb "blue"
-set style line 4 lt 1 lw 2 lc rgb "green"
-
-# Plot all KDE-smoothed curves
+set ytics 10
+# Define line styles
+set style line 1 lt 1 lc rgb "black"  lw 4
+set style line 2 lt 1 lc rgb "red"    lw 4 
+set style line 3 lt 1 lc rgb "blue"  lw 4
+set style line 4 lt 1 lc rgb "green" lw 4
+#set errorbars small             # or use: set errorbars 0.5
+#set errorbars linecolor black linewidth 0.5 dashtype '.'
+set errorbars 0.4 linewidth 1
+#set errorbars 1.3
 plot \
-  'p0.txt'   using 1:(1.0/41100) smooth kdensity  with lines ls 1 title '$0$', \
-  'p5.txt'   using 1:(1.0/105600) smooth kdensity  with lines ls 2 title '$5$', \
-  'p15.txt'  using 1:(1.0/107800) smooth kdensity  with lines ls 3 title '$15$', \
-  'p30.txt'  using 1:(1.0/68700) smooth kdensity  with lines ls 4 title '$30$'
-
+    'watpackphi0.txt' using 1:2 w l ls 1  title "$0$", \
+    'watpackphi5.txt' using 1:2 with l ls 2 title "$5$", \
+    'watpackphi15.txt' using 1:2 with l ls 3 title "$15$", \
+    'watpackphi30.txt' using 1:2 with l ls 4 title "$30$"

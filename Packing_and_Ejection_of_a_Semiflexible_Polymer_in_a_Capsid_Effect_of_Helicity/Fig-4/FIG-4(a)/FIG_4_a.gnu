@@ -1,10 +1,10 @@
 set terminal epslatex color standalone size 3,2 font ",8"
-set output 'FIG_2_b.tex'
+set output 'FIG_4_a.tex'
 
 set xlabel "$t/\\tau_d$"
 set ylabel "$n_{\\textrm{pack}}/N$"
-set label "$\\beta\\kappa_{\\theta}/\\sigma = 15 $" at graph 0.5, 0.4 center
-set label "$\\beta\\kappa_{\\phi}$" at graph 0.5, 0.5 center
+set label "$\\beta\\kappa_{\\theta}/\\sigma = 10 $" at graph 0.5, 0.4 center
+set label "$\\beta\\kappa_{\\phi}$" at graph 0.5, 0.7 center
 #set xrange [*:*] reverse
 set key top right
 # set style data errorbars  <-- Not needed for line-only plot

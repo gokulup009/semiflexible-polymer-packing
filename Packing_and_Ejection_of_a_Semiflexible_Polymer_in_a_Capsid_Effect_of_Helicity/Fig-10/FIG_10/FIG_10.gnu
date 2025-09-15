@@ -1,6 +1,6 @@
 reset
 set terminal epslatex standalone color size 3.5,2 font ',8'
-set output 'FIG_9.tex'
+set output 'FIG_10.tex'
 
 set xlabel '$\psi(L)$'
 set ylabel '$p(\psi(L))$'

@@ -1,5 +1,5 @@
 set terminal epslatex color standalone size 3,2 font ",8"
-set output 'FIG_2_d.tex'
+set output 'FIG_4_d.tex'
 
 set xlabel "Total packing time ($\\tau_{tot}/\\tau_d$)"
 set ylabel "Pdf"

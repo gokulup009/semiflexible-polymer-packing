@@ -1,5 +1,5 @@
 set terminal epslatex color standalone size 3,2 font ",8"
-set output 'FIG_2_c.tex'
+set output 'FIG_4_c.tex'
 
 set xlabel "$\\beta\\kappa_{\\phi}$"
 set ylabel " Total packing time ($\\tau_{tot}/\\tau_d$)"

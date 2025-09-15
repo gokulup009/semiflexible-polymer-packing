@@ -3,14 +3,13 @@ set output 'FIG_6.tex'
 
 set xlabel "$n_{pack}/N$"
 set ylabel " $w(n_{pack})$"
-set label "$\\beta\\kappa_{\\theta}/\\sigma = 10 $" at graph 0.5, 0.3 center
-set label "$U_{wall}=0$" at graph 0.5, 0.2 center
-set label "$\\beta\\kappa_{\\phi} $" at graph 0.8, 0.2 center
+set label "$\\beta\\kappa_{\\theta}/\\sigma = 10 $" at graph 0.5, 0.9 center
+set label "$\\beta\\kappa_{\\phi}$" at graph 0.5, 0.7 center
 #set xrange [*:*] reverse
-set key top right
+set key top left
 # set style data errorbars  <-- Not needed for line-only plot
 set xtics 0.2
-set ytics 10
+set ytics 20
 # Define line styles
 set style line 1 lt 1 lc rgb "black"  lw 4
 set style line 2 lt 1 lc rgb "red"    lw 4 
