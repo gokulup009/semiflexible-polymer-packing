@@ -1,38 +1,49 @@
 # Packing and Ejection of a Semiflexible Polymer in a Capsid: Effect of Helicity
 
-This repository contains all simulation data, figures, and plotting scripts associated with the study:
+This repository contains the simulation data, figures, and plotting scripts associated with the study:
 
-**"Packing and Ejection of a Semiflexible Polymer in a Capsid: Effect of Helicity"**
+**“Packing and Ejection of a Semiflexible Polymer in a Capsid: Effect of Helicity”**
 
-## 📂 Directory Structure
+---
 
-Each directory corresponds to a figure in the manuscript and contains:
+## 📖 Summary
 
-- Raw simulation data (`*.txt`)
-- Gnuplot scripts (`*.gnu`)
-- Temporary files (e.g., `.tga`, `.dump`) where applicable
+We use Langevin dynamics simulations to investigate how **torsional rigidity (helicity)** influences the **packing** and **ejection** of a semiflexible polymer inside a spherical capsid.
+
+* **Packing:** a small amount of torsional stiffness speeds up packing by promoting spool-like conformations, while higher stiffness leads to a non-monotonic change in packing time.
+* **Ejection:** torsional stiffness generally slows down ejection, as it resists polymer uncoiling.
+
+These results highlight the key role of torsional elasticity in confined polymer dynamics and provide insights into viral genome packaging.
+
+---
+
+## 📂 Repository Structure
+
+Each directory corresponds to a figure in the manuscript:
 
 ```
-Packing_and_Ejection_of_a_Semiflexible_Polymer_in_a_Capsid_Effect_of_Helicity/
-├── Fig-1/       # Initial configurations / snapshots
-├── Fig-2/       # Packing time analysis
-├── Fig-3/       # Tangent–tangent correlation and persistence length
-├── Fig-4/       # Effect of confinement (U_wall = 0 vs WCA)
-├── Fig-5/       # Waiting time during packing
-├── Fig-6/       # Late-stage packing and κφ dependence
-├── Fig-7/       # Radial distribution functions
-├── Fig-9/       # Turning number distributions
-├── Fig-10/      # Total ejection time vs κφ
-├── Fig-11/      # Waiting time during ejection
+semiflexible-polymer-packing/
+├── Fig-1/   # Simulation snapshot
+├── Fig-2/   # Radius of gyration
+├── Fig-3/   # Tangent–tangent correlation & persistence length
+├── Fig-4/   # Packing dynamics
+├── Fig-5/   # Effect of spherical confinement
+├── Fig-6/   # Waiting times during packing
+├── Fig-7/   # Waiting times (U_wall = 0)
+├── Fig-8/   # Radial distribution functions
+├── Fig-9/   # Packed conformations (snapshots + projections)
+├── Fig-10/  # Turning number distributions
+├── Fig-11/  # Ejection dynamics
+├── Fig-12/  # Waiting times during ejection
 ```
 
-## 🔧 Tools & Workflow
+Each folder contains raw data, gnuplot scripts, and LaTeX files for figure generation.
 
-- 📊 **Plotting:** Figures were generated using `gnuplot` scripts with `set terminal epslatex`.
-- 📄 **Compilation:** `.tex` figures were compiled using `pdflatex`.
-- 🖋️ **Post-processing:** Final positioning of labels and annotations was refined using **Inkscape**.
+---
 
-### 🔁 Example Workflow
+## 🔧 Workflow
+
+Example (for Fig-2a):
 
 ```bash
 cd Fig-2/FIG-2(a)/
@@ -40,34 +51,27 @@ gnuplot FIG_2_a.gnu
 pdflatex FIG_2_a.tex
 ```
 
-> _Tip:_ After compiling, open the resulting `.pdf` in Inkscape to manually adjust label positions and improve layout.
+Figures were generated using `gnuplot` and `pdflatex`, with minor adjustments in Inkscape.
 
-## ✅ Requirements
+---
 
-Install the following tools (Ubuntu/Debian):
+## 👨‍💻 Authors
 
-```bash
-sudo apt install gnuplot texlive-full inkscape
-```
+Soham Dhali, Gokul Upadhyay, Abhishek Chaudhuri, and Anil Kumar Dasanna§
 
-## 📝 Notes
-
-- Data were obtained from LAMMPS simulations of polymer translocation and packing.
-- Each data point is averaged over multiple runs to ensure statistical reliability.
-- Figures follow uniform font sizes, scaling, and aspect ratios for publication readiness.
-
-## 👨‍💻 Author
-
-**Soham Dhali, Gokul Upadhyay, Abhishek Chaudhuri and Anil Kumar Dasanna§**  
+---
 
 ## 📜 License
 
-This repository is shared for academic and research purposes only. Please contact the authors before reuse.
+For academic and research purposes only. Please contact the authors before reuse.
+
+---
 
 ## 📚 Citation
 
-If you use this data or figures in your work, please cite:
+If you use this repository, please cite:
 
-> Soham Dhali, Gokul Upadhyay, Abhishek Chaudhuri, Anil Kumar Dasanna  
-> *Packing and Ejection of a Semiflexible Polymer in a Capsid: Effect of Helicity*  
+**Soham Dhali, Gokul Upadhyay, Abhishek Chaudhuri, and Anil Kumar Dasanna.**
+*Packing and Ejection of a Semiflexible Polymer in a Capsid: Effect of Helicity* (2025).
 
+---
