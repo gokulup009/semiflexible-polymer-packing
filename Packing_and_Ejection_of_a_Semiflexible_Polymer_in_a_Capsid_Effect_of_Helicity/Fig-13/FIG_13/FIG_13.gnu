@@ -1,5 +1,5 @@
 set terminal epslatex color standalone size 3,2 font ",8"
-set output 'FIG_12.tex'
+set output 'FIG_13.tex'
 
 set xlabel "$n_{pack}/N$"
 set ylabel " $w(n_{pack})$"
