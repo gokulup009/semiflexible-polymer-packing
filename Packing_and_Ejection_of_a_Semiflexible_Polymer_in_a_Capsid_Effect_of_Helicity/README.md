@@ -21,7 +21,6 @@ These results highlight the key role of torsional elasticity in confined polymer
 
 Each directory corresponds to a figure in the manuscript:
 
-```
 semiflexible-polymer-packing/
 ├── Fig-1/   # Simulation snapshot
 ├── Fig-2/   # Radius of gyration
@@ -34,8 +33,9 @@ semiflexible-polymer-packing/
 ├── Fig-9/   # Packed conformations (snapshots + projections)
 ├── Fig-10/  # Turning number distributions
 ├── Fig-11/  # Ejection dynamics
-├── Fig-12/  # Waiting times during ejection
-```
+├── Fig-12/  # Ejection without motor force
+├── Fig-13/  # Waiting times during ejection
+
 
 Each folder contains raw data, gnuplot scripts, and LaTeX files for figure generation.
 
